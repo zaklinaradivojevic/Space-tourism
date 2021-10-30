@@ -1,27 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="crew-commander.css">
   <title>Frontend Mentor | Space tourism website</title>
 </head>
+
 <body>
+  <div class="nav">
+    <div class="home">
+      <a href="index.html">
+        00 Home
+      </a>
+    </div>
+    <div class="destination">
+      <a href="destination-europa.html">
+        01 Destination
+      </a>
+    </div>
+    <div class="crew">
+      <a href="crew-engineer.html">
+        02 Crew
+      </a>
+    </div>
+    <div class="technology">
+      <a href="technology-capsule.html">
+        03 Technology
+      </a>
+    </div>
+  </div>
+  <div class="panel">
+    <img
+      src="https://github.com/zaklinaradivojevic/Space-tourism/blob/main/starter-code/assets/crew/image-douglas-hurley.png?raw=true"
+      alt="commander">
+  </div>
+  <div class="text">
+    <h4> 02 Meet your crew</h4>
+    <a href=""> Commander</a>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+    <div class="desc">
+      <a href=""> Douglas Hurley</a>
 
-  02 Meet your crew
 
-  Commander
-  Douglas Hurley
+      <p class="planet">
+        Douglas Gerald Hurley is an American engineer, former Marine Corps pilot
+        and former NASA astronaut. He launched into space for the third time as
+        commander of Crew Dragon Demo-2.
+      </p>
 
-  Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
-  and former NASA astronaut. He launched into space for the third time as 
-  commander of Crew Dragon Demo-2.
+    </div>
+    <div class="carusel">
+      <a href="crew-engineer.html">
+        <input type="radio" checked onclick="location.href='crew-engineer.html';">
+      </a>
+      <a href="crew-pilot.html">
+        <input type="radio" onclick="location.href='crew-pilot.html';">
+      </a>
+      <a href="crew-specialist.html">
+        <input type="radio" onclick="location.href='crew-specialist.html';">
+      </a>
+    </div>
+  </div>
 </body>
+
 </html>

@@ -1,0 +1,122 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  width: 100%;
+  height:100%;
+  background-image: url("https://github.com/zaklinaradivojevic/Space-tourism/blob/main/starter-code/assets/home/background-home-desktop.jpg?raw=true");
+  background-position: center  center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.panel{
+  width: 100%;
+  height: 100vh;
+  color:white;
+}
+.nav{
+  margin-top:5%;
+  float: right; 
+  right: 0;
+  width: 60%;
+  height: 10vh;
+  text-align: center;
+  display: flex;
+background: rgba(255, 255, 255, 0.2);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+position: relative;
+ overflow: hidden;
+}
+.home,
+.destination,
+.crew,
+.tehnology{
+width: 15vw;
+height:10vh;
+ padding:20px;
+text-transform: uppercase;
+text-align: center;
+font-size : clamp(1rem,2vw,1rem);
+ white-space:nowrap;
+ border-bottom: transparent;
+}
+.home:hover,
+.destination:hover,
+.crew:hover,
+.tehnology:hover{
+ border-bottom:1px  solid  white;
+}
+  .nav a{
+  color: white;
+  text-decoration: none; 
+  display: inline-block;
+  text-align: center;
+  display: block;
+  }
+.nav a:hover{
+  opacity: 0.7;
+}
+.logo{
+  margin-top:5%;
+  margin-left: 5%;
+  float: left; 
+  z-index: -999;
+  position: absolute;
+}
+.line{
+  width: 45vw;
+  position: relative;
+ }
+#line{
+ margin-top: -25px;
+   margin-left: 100px;
+   color: dimgray;
+ }
+ .text{
+  top: 40%;
+  width: 50%;
+  float: left; 
+  left: 14vw; 
+  bottom: 14vw; 
+  position: absolute;
+ }
+ .text h4{
+  font-size: clamp(1rem, 1.5vw, 2rem);  
+   margin-bottom: 20px;
+   text-transform: uppercase; 
+ }
+ .text h1{
+  font-size: clamp(4rem, 1.5vw, 2rem); 
+  margin-bottom: 20px; 
+  text-transform: uppercase;  
+ }
+ .text p{
+   width: 35vw;
+   line-height: 30px;
+   font-size: clamp(1rem, 1.5vw, 2rem); 
+ }
+ .explore_panel{
+     width: 50%;
+     float: right;
+ }
+ .explore{
+   width:25vw; 
+   height: 25vw; 
+   background-color: white;
+   float: right;
+   right: 10vw;
+   border-radius: 50%;
+   margin-top: 30vh;
+   position: absolute;
+ }
+ .explore h1{
+    color: dimgray;
+    top:9vw;
+    left:4vw;
+   font-size:5vw;
+   position:absolute;
+   font-weight: 900;
+ }

@@ -1,28 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="crew-pilot.css">
   <title>Frontend Mentor | Space tourism website</title>
 </head>
+
 <body>
+  <div class="nav">
+    <div class="home">
+      <a href="index.html">
+        00 Home
+      </a>
+    </div>
+    <div class="destination">
+      <a href="destination-europa.html">
+        01 Destination
+      </a>
+    </div>
+    <div class="crew">
+      <a href="crew-engineer.html">
+        02 Crew
+      </a>
+    </div>
+    <div class="technology">
+      <a href="technology-capsule.html">
+        03 Technology
+      </a>
+    </div>
+  </div>
+  <div class="panel">
+    <img
+      src="https://github.com/zaklinaradivojevic/Space-tourism/blob/main/starter-code/assets/crew/image-victor-glover.png?raw=true"
+      alt="commander">
+  </div>
+  <div class="text">
+    <h4> 02 Meet your crew</h4>
+    <a href=""> Pilot</a>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+    <div class="desc">
+      <a href=""> Victor Glover</a>
 
-  02 Meet your crew
 
-  Pilot
-  Victor Glover
+      <p class="planet">
+        Pilot on the first operational flight of the SpaceX Crew Dragon to the
+        International Space Station. Glover is a commander in the U.S. Navy where
+        he pilots an F/A-18.He was a crew member of Expedition 64, and served as a
+        station systems flight engineer.
+      </p>
 
-  Pilot on the first operational flight of the SpaceX Crew Dragon to the 
-  International Space Station. Glover is a commander in the U.S. Navy where 
-  he pilots an F/A-18.He was a crew member of Expedition 64, and served as a 
-  station systems flight engineer. 
+    </div>
+    <div class="carusel">
+      <a href="crew-commander.html">
+        <input type="radio" checked onclick="location.href='crew-commander.html';">
+      </a>
+      <a href="crew-engineer.html">
+        <input type="radio" onclick="location.href='crew-engineer.html';">
+      </a>
+      <a href="crew-specialist.html">
+        <input type="radio" onclick="location.href='crew-specialist.html';">
+      </a>
+    </div>
+  </div>
 </body>
+
 </html>
