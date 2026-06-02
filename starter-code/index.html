@@ -9,49 +9,55 @@
 </head>
 <body>
   <div class="panel">
-    <!-- Top Bar: Logo & Horizontal Rule Structure -->
-    <div class="logo">
-      <img id="logo" src="https://raw.githubusercontent.com/zaklinaradivojevic/Space-tourism/de85be82722bbf0a51f45ef93d1f701ecdf9c2bc/starter-code/assets/shared/logo.svg" alt="logo">
-      <div class="line">
-        <hr id="line">
-      </div>
-    </div>
-
-    <!-- Main Navigation Bars Linking to Your Sub-Pages -->
-    <div class="nav">
-      <div class="home">
-        <a href="index.html">00 Home</a>
-      </div>
-      <div class="destination">
-        <a href="destination-europa.html">01 Destination</a>
-      </div>
-      <div class="crew">
-        <a href="crew-commander.html">02 Crew</a>
-      </div>
-      <div class="tehnology">
-        <a href="technology-vehicle.html">03 Technology</a>
-      </div>
-    </div>
-
-    <!-- Main Hero Text Section -->
-    <div class="text">
-      <h4>So, you want to travel to</h4>
-      <h1>Space</h1>
-      <p>
-        Let’s face it; if you want to go to space, you might as well genuinely go to
-        outer space and not hover kind of on the edge of it. Well sit back, and relax
-        because we’ll give you a truly out of this world experience!
-      </p>
-    </div>
-
-    <!-- Call to Action Interactive Explore Button -->
-    <div class="explore_panel">
-      <a href="destination-europa.html" class="explore-link">
-        <div class="explore">
-          <h1>Explore</h1>
+    
+    <!-- Top Row: Semantic Flexbox Header containing Logo & Navigation Link Blocks -->
+    <header class="header-container">
+      <div class="logo">
+        <img id="logo" src="https://raw.githubusercontent.com/zaklinaradivojevic/Space-tourism/de85be82722bbf0a51f45ef93d1f701ecdf9c2bc/starter-code/assets/shared/logo.svg" alt="logo">
+        <div class="line">
+          <hr id="line">
         </div>
-      </a>
+      </div>
+
+      <nav class="nav">
+        <div class="home">
+          <a href="index.html">00 Home</a>
+        </div>
+        <div class="destination">
+          <a href="destination-europa.html">01 Destination</a>
+        </div>
+        <div class="crew">
+          <a href="crew-commander.html">02 Crew</a>
+        </div>
+        <div class="tehnology">
+          <a href="technology-vehicle.html">03 Technology</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Bottom Row: 2-Column CSS Grid Container splitting Hero Text & Explore CTA -->
+    <div class="hero-content-wrapper">
+      <!-- Left Column: Main Hero Text Block -->
+      <section class="text">
+        <h4>So, you want to travel to</h4>
+        <h1>Space</h1>
+        <p>
+          Let’s face it; if you want to go to space, you might as well genuinely go to
+          outer space and not hover kind of on the edge of it. Well sit back, and relax
+          because we’ll give you a truly out of this world experience!
+        </p>
+      </section>
+
+      <!-- Right Column: Interactive Explore Container -->
+      <div class="explore_panel">
+        <a href="destination-europa.html" class="explore-link">
+          <div class="explore">
+            <h1>Explore</h1>
+          </div>
+        </a>
+      </div>
     </div>
+
   </div>
 </body>
 </html>
