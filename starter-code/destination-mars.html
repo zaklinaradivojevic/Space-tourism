@@ -1,65 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="stylesheet" href="destination-mars.css">
-  <title>Frontend Mentor | Space tourism website</title>
+  <link rel="stylesheet" href="destination-moon.css">
+  <title>Space Tourism | Moon</title>
 </head>
-
 <body>
   <div class="panel">
-    <div class="nav">
-      <div class="home">
-        <a href="index.html">
-          00 Home
-        </a>
+    
+    <!-- Gornja Navigacija -->
+    <header class="header-container">
+      <div class="logo">
+        <img id="logo" src="https://githubusercontent.com" alt="logo">
+        <div class="line"><hr id="line"></div>
       </div>
-      <div class="destination">
-        <a href="destination-moon.html">
-          01 Destination
-        </a>
+      <nav class="nav">
+        <div class="nav-item"><a href="index.html">00 Home</a></div>
+        <div class="nav-item active"><a href="destination-moon.html">01 Destination</a></div>
+        <div class="nav-item"><a href="crew-commander.html">02 Crew</a></div>
+        <div class="nav-item"><a href="technology-capsule.html">03 Technology</a></div>
+      </nav>
+    </header>
+
+    <!-- Glavni Sadržaj -->
+    <div class="destination-wrapper">
+      
+      <!-- Leva kolona: Naslov i slika Meseca -->
+      <div class="destination-left">
+        <h2 class="sub-heading"><span>01</span> Pick your destination</h2>
+        <div class="img-container">
+          <img src="./assets/destination/image-mars.png" alt="Moon" id="planet-img">
+        </div>
       </div>
-      <div class="crew">
-        <a href="crew-commander.html">
-          02 Crew
-        </a>
-      </div>
-      <div class="tehnology">
-        <a href="technology-capsule.html">
-          03 Technology
-        </a>
-      </div>
-    </div>
-    <div class="text">
-      <h4> 01 Pick your destination </h4>
-      <a href="destination-moon.html">Moon</a>
-      <a href="destination-mars.html">Mars</a>
-      <a href="destination-europa.html">Europa</a>
-      <a href="destination-titan.html">Titan</a>
-
-      <div class="desc">
-        <a href="destination-europa.html">Mars</a>
-
-
-        <p class="planet"> Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons,
-          the tallest planetary mountain in our solar system. It’s two and a half times
-          the size of Everest!
-
+      
+      <!-- Desna kolona: Pod-navigacija i podaci -->
+      <div class="destination-right">
+        <div class="sub-nav">
+          <a href="destination-moon.html" class="sub-nav-btn active">Moon</a>
+          <a href="destination-mars.html" class="sub-nav-btn">Mars</a>
+          <a href="destination-europa.html" class="sub-nav-btn">Europa</a>
+          <a href="destination-titan.html" class="sub-nav-btn">Titan</a>
+        </div>
+        
+        <h1 class="planet-title">Moon</h1>
+        <p class="planet-text">
+          See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+          regain perspective and come back refreshed. While you’re there, take in some 
+          history by visiting the Luna 2 and Apollo 11 landing sites.
         </p>
-
-        <p class="distance"> Avg. distance
-          225 mil. km
-        </p>
-
-        <p class="time"> Est. travel time
-          9 months</p>
+        
+        <hr class="divider">
+        
+        <div class="planet-meta">
+          <div class="meta-box">
+            <h5>AVG. DISTANCE</h5>
+            <p>384,400 km</p>
+          </div>
+          <div class="meta-box">
+            <h5>EST. TRAVEL TIME</h5>
+            <p>3 days</p>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 </body>
-
 </html>
