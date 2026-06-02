@@ -1,122 +1,239 @@
-*{
+/* --- RESET & ROOT RULES --- */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-body{
+
+:root {
+  /* Establish fluid scale base typography reference values */
+  font-size: clamp(0.875rem, 1vw + 0.5rem, 1.25rem);
+}
+
+body {
   width: 100%;
-  height:100%;
-  background-image: url("https://github.com/zaklinaradivojevic/Space-tourism/blob/main/starter-code/assets/home/background-home-desktop.jpg?raw=true");
-  background-position: center  center;
+  min-height: 100vh;
+  background-image: url("https://github.com");
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow-x: hidden;
+  font-family: sans-serif;
 }
-.panel{
+
+/* --- MAIN CONTROLLING CSS GRID WORKSPACE --- */
+.panel {
   width: 100%;
-  height: 100vh;
-  color:white;
+  min-height: 100vh;
+  color: white;
+  
+  /* Creates a structured 2-row layout: Header row on top, Hero content row below */
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-items: center;
 }
-.nav{
-  margin-top:5%;
-  float: right; 
-  right: 0;
-  width: 60%;
-  height: 10vh;
-  text-align: center;
+
+/* --- HEADER FLEX CONTAINER (Logo & Navigation) --- */
+header, .header-container {
   display: flex;
-background: rgba(255, 255, 255, 0.2);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-position: relative;
- overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: clamp(1.5rem, 3vh, 4rem);
+  width: 100%;
+  position: relative;
 }
+
+/* Reconfigured logo to cleanly hold and flex items */
+.logo {
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+  flex-grow: 0;
+}
+
+#logo {
+  width: clamp(2.5rem, 4vw, 3rem);
+  height: auto;
+}
+
+/* Flexible line stretching between components */
+.line {
+  flex-grow: 1;
+  margin-left: 2rem;
+  margin-right: -2rem; /* Pulls line closer to the glassmorphic block */
+  z-index: 10;
+}
+
+#line {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* --- TRANSLUCENT GLASSMORPHIC NAVIGATION BAR (FLEXBOX) --- */
+.nav {
+  width: 55%;
+  height: 10vh;
+  min-height: 4.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 0 4rem;
+}
+
 .home,
 .destination,
 .crew,
-.tehnology{
-width: 15vw;
-height:10vh;
- padding:20px;
-text-transform: uppercase;
-text-align: center;
-font-size : clamp(1rem,2vw,1rem);
- white-space:nowrap;
- border-bottom: transparent;
+.tehnology {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s ease;
 }
+
 .home:hover,
 .destination:hover,
 .crew:hover,
-.tehnology:hover{
- border-bottom:1px  solid  white;
+.tehnology:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
 }
-  .nav a{
+
+.nav a {
   color: white;
-  text-decoration: none; 
-  display: inline-block;
-  text-align: center;
-  display: block;
+  text-decoration: none;
+  font-size: clamp(0.75rem, 1vw, 1rem);
+  letter-spacing: calc(0.1rem + 0.1vw);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* --- MAIN HERO ROW (2-COLUMN GRID SPLIT) --- */
+.hero-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  margin: 0 auto;
+  align-items: flex-end;
+  padding-bottom: 15vh;
+}
+
+/* --- HERO TEXT DISPLAY BLOCKS --- */
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.text h4 {
+  font-size: clamp(1rem, 1.5vw, 1.75rem);
+  font-weight: 300;
+  letter-spacing: 0.25rem;
+  margin-bottom: 1.5rem;
+  color: #d2d8f9;
+  text-transform: uppercase;
+}
+
+.text h1 {
+  font-size: clamp(4rem, 8vw, 9.375rem);
+  font-weight: 400;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.text p {
+  width: 100%;
+  max-width: 28rem;
+  line-height: 1.7;
+  font-size: clamp(0.95rem, 1.1vw, 1.25rem);
+  color: #d2d8f9;
+}
+
+/* --- ACTION BUTTON PANEL (FLEXBOX CENTERED) --- */
+.explore_panel {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.explore {
+  width: clamp(10rem, 18vw, 17.125rem);
+  height: clamp(10rem, 18vw, 17.125rem);
+  background-color: white;
+  border-radius: 50%;
+  
+  /* Flex grid shorthand to perfectly place text in dead center */
+  display: grid;
+  place-items: center;
+  
+  cursor: pointer;
+  transition: box-shadow 0.4s ease-in-out;
+}
+
+.explore:hover {
+  box-shadow: 0 0 0 clamp(2rem, 4vw, 4rem) rgba(255, 255, 255, 0.1);
+}
+
+.explore h1 {
+  color: #0b0d17;
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+
+/* --- MULTI-DEVICE RESPONSIVE BREAKPOINTS --- */
+@media (max-width: 960px) {
+  .panel {
+    grid-template-rows: auto;
   }
-.nav a:hover{
-  opacity: 0.7;
+  
+  header, .header-container {
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+  
+  .logo {
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .line {
+    display: none;
+  }
+  
+  .nav {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  
+  .hero-content-wrapper {
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+    text-align: center;
+    width: 90%;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  .text {
+    align-items: center;
+  }
+  
+  .text p {
+    margin: 0 auto;
+  }
+  
+  .explore_panel {
+    justify-content: center;
+    align-items: center;
+  }
 }
-.logo{
-  margin-top:5%;
-  margin-left: 5%;
-  float: left; 
-  z-index: -999;
-  position: absolute;
-}
-.line{
-  width: 45vw;
-  position: relative;
- }
-#line{
- margin-top: -25px;
-   margin-left: 100px;
-   color: dimgray;
- }
- .text{
-  top: 40%;
-  width: 50%;
-  float: left; 
-  left: 14vw; 
-  bottom: 14vw; 
-  position: absolute;
- }
- .text h4{
-  font-size: clamp(1rem, 1.5vw, 2rem);  
-   margin-bottom: 20px;
-   text-transform: uppercase; 
- }
- .text h1{
-  font-size: clamp(4rem, 1.5vw, 2rem); 
-  margin-bottom: 20px; 
-  text-transform: uppercase;  
- }
- .text p{
-   width: 35vw;
-   line-height: 30px;
-   font-size: clamp(1rem, 1.5vw, 2rem); 
- }
- .explore_panel{
-     width: 50%;
-     float: right;
- }
- .explore{
-   width:25vw; 
-   height: 25vw; 
-   background-color: white;
-   float: right;
-   right: 10vw;
-   border-radius: 50%;
-   margin-top: 30vh;
-   position: absolute;
- }
- .explore h1{
-    color: dimgray;
-    top:9vw;
-    left:4vw;
-   font-size:5vw;
-   position:absolute;
-   font-weight: 900;
- }
